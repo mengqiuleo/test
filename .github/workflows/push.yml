@@ -38,11 +38,11 @@ jobs:
                   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
                   # scp参数
                   ARGS: '-avzr --delete'
-                  # 源目录
-                  SOURCE: 'cms.panjingyi.top'
                   # 服务器ip：换成你的服务器IP
                   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
                   # 用户
                   REMOTE_USER: 'root'
+                  # 对应我们项目build的文件夹路径
+                  local_path: './dist/*' 
                   # 目标地址
-                  TARGET: '/www/wwwroot'
+                  TARGET: '/www/wwwroot/cms.panjingyi.top'
